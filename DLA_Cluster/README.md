@@ -6,6 +6,6 @@ DLA CLUTER:
 
  M ~ r^(d)
 
- The clusters fractal dimensionality is calculated in frac_dim.py. The fractal dimensionality is calculated by counting the number of points in the cluster within a given radius and plotting this as a function of radius. The number of points M will grow proportionally to r given by the equation above. The exponent d is the fractal dimensionality. On a log log plot d will be the slope of the line fitting the M(r) curve. 
+ The clusters fractal dimensionality is calculated in frac_dim.py. The fractal dimensionality is calculated by counting the number of points in the cluster within a given radius and plotting this as a function of radius. The number of points M will grow proportionally to r given by the equation above. The exponent d is the fractal dimensionality. On a log log plot d will be the slope of the line fitting the M(r) curve. The fitting parameters are found in the fit.log file createed using GnuPlot.
 
  Data is saved to .txt files using save.py. The plots.gp file is a GnuPlot script that can be run using GnuPlot from terminal to view plots and animations. Only the first walker is animated since it requires a vast amount of memory to animate the entire cluster. The animation is saved as the cluster_animate.gif file. The final cluster is saved as DLACluster.jpeg. The data and best fit line for the clusters fractal dimensionality is saved as frac_dim.jpeg. 
