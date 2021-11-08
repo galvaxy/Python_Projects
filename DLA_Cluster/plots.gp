@@ -31,8 +31,6 @@ plot 'frac_dim.txt' ti "Fractal Dimensionality" lt 1 lw 2 lc rgb "black", f(x) t
 unset format
 unset logscale
 
-set terminal gif animate 
-set output "cluster_animate.gif"
 set size square
 set grid lt 0 lw 1
 set yrange [-50:50]
@@ -43,4 +41,6 @@ set xlabel "x" offset 0,-1 font "Menlo,15"
 set ylabel "y" offset -3,0 font "Menlo,15"
 set key font "Menlo,15"
 stats "cluster_animate.txt"
-do for[i=0:STATS_blocks] {plot 'cluster_animate.txt' index i ti "DLA Cluster" lt 1 lw 2 lc rgb "black"}
+do for[i=0:STATS_blocks]{set terminal jpeg
+    set output sprintf('Plots/plot%06.0f.jpeg',i)
+    plot 'cluster_animate.txt' index i ti "DLA Cluster" lt 1 lw 2 lc rgb "black"}
