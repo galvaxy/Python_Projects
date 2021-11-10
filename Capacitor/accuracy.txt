@@ -1,0 +1,5 @@
+ Calculated Capacitance -> 8.0844e-11
+
+ Analytical Capacitance -> 8.026e-11
+
+ Percent Error -> 0.73
